@@ -12,7 +12,7 @@
 - **Salesforce** (projeto Salesforce DX). Metadados em `src/force-app/` — o pacote padrão declarado em `sfdx-project.json`.
 - Apex no backend, LWC no frontend, testes de LWC com Jest (`sfdx-lwc-jest`), testes Apex na org.
 - Org de desenvolvimento: alias `org-impacta` (Developer Edition, **sem source tracking** → trabalhar com `--source-dir` / `--manifest`, não com push/pull).
-- **[a decidir pelo POD]** — como o MVP fica numa URL pública (ex.: Experience Cloud / Site) e como a IA é chamada; vira ADR em `docs/adr/`.
+- Plataforma, URL pública (site Experience Cloud com usuário convidado), IA e CI: proposta no **ADR-0002** (status Proposto, pendente do spike e da confirmação do POD). Estrutura do repositório: **ADR-0001**.
 
 ## Estrutura do repositório
 
@@ -62,4 +62,6 @@ npm run prettier:verify
 5. **Nenhum segredo no repositório** (tokens, chaves de API, senhas, `.env`). Credenciais ficam na org (Named Credentials / External Credentials) ou em variáveis de ambiente do CI.
 6. **Decisão técnica não óbvia vira ADR** em `docs/adr/`.
 7. **Código e nomes técnicos em inglês** (classes, campos, objetos, componentes); documentação de produto em português.
-8. **[a decidir pelo POD]** — padrões de Apex (ex.: `with sharing`, bulkificação, cobertura mínima), design system (ADR do checkpoint 03) e limites do que o agente pode fazer sozinho.
+8. **Configuração feita no Setup volta para o repositório.** Toda mudança feita em tela na org (site, permissões, agente, objetos) é recuperada com `sf project retrieve start` e commitada no mesmo PR. O que não tem metadado vai como passo a passo em `docs/`. Sem isso, o repositório não regenera o produto.
+9. **No Windows, SOQL pelo PowerShell.** No Git Bash, o `>` dentro de uma query vira redirecionamento de arquivo.
+10. **[a decidir pelo POD]** — padrões de Apex (ex.: `with sharing`, bulkificação, cobertura mínima), design system (ADR do checkpoint 03) e limites do que o agente pode fazer sozinho.
