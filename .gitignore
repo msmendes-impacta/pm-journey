@@ -46,3 +46,12 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+
+# Mentorship handoff (local only, see .claude/skills/pmj-*)
+HANDOFF-MENTORIA-PM-JOURNEY.md
+
+# Class material (keep local unless the professor asks for it)
+/Bootcamp*.pdf
+
+# Personal Claude Code skills for the mentorship workflow (local only)
+.claude/skills/pmj-*/
