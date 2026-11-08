@@ -37,3 +37,20 @@
 **Onde o POD interveio**
 - Pediu para instalar o Spec Kit agora, e não só no checkpoint 02 como o agente tinha sugerido, para conhecer as skills disponíveis.
 - Pediu a conferência com a documentação oficial antes de seguir.
+
+## 2026-11-08 — discovery do pm-home e governança do repositório
+
+**O que o agente fez**
+- Leu as skills de discovery do Spec Kit (`assess`) antes de usá-las e mostrou ao POD que elas não entrevistam: registram o que a entrevista traz, sem inventar, marcando lacunas e exigindo uma seção de evidências contra a ideia. A entrevista seguiu as técnicas do guia de método (começar pelo problema, pedir um caso concreto, reformular e devolver).
+- Registrou o README antigo como "ideia bruta" (`intake.md`), conduziu quatro rodadas de entrevista com o autor e escreveu o `research.md` com fonte para cada afirmação. A pesquisa externa achou que a Certinia descontinuou o Resource Planner em favor do Work Planner, que ataca o mesmo problema; isso entrou como evidência contra a ideia.
+- Preparou o roteiro de conversa com PMs e Resource Managers em inglês e a lista do que falta para formalizar o problema (`pendencias-e-roteiro.md`).
+- Adicionou a Nicoli como colaboradora e protegeu a `main` (PR com 1 aprovação, também para administradores, sem force-push).
+
+**Onde o agente errou**
+- A primeira formulação do problema veio carregada pelo README (alertas para o PM). A entrevista mostrou outro problema (visibilidade de capacidade, com o Resource Manager como possível usuário principal); o agente expôs a diferença em vez de seguir o README.
+- Tentou ler a documentação da Certinia por fetch automático; o portal carrega por JavaScript e não devolveu conteúdo. O agente registrou a falha e usou trechos de busca, marcados como não abertos.
+
+**Onde o POD interveio**
+- Lembrou que ainda não era hora de desenhar funcionalidades: só problema, formalização e escopo.
+- Pediu o roteiro em inglês, porque os PMs são americanos.
+- Revisou e mesclou o PR #3 deixando só um comentário ("Revisado."), sem a aprovação formal do GitHub. O agente apontou que o repositório não registra revisão por comentário; o POD decidiu proteger a `main`, e a partir daqui o merge só libera com "Approve".
