@@ -69,8 +69,8 @@ Spec-Driven Development com o [Spec Kit](https://github.com/github/spec-kit) v1.
 1. **Spec antes do código.** Nada é implementado sem uma história em `docs/specs/` com critérios Dado / Quando / Então.
 2. **Rastreabilidade.** Todo PR cita a(s) história(s) que atende; todo teste aponta para a história de onde veio.
 3. **Ciclo AI-DLC.** O agente propõe o plano → o POD aprova → o agente executa → o POD revisa, testa e faz o merge.
-4. **Sem push direto na `main`.** Branch → PR → CI verde → revisão de outro membro do POD → merge. No máximo **2 PRs abertos**.
-5. **Nenhum segredo no repositório** (tokens, chaves de API, senhas, `.env`). Credenciais ficam na org (Named Credentials / External Credentials) ou em variáveis de ambiente do CI.
+4. **Sem push direto na `main`.** Branch → PR → CI verde → revisão de outro membro do POD → merge. No máximo **2 PRs abertos**. Revisão conta só como **aprovação formal no GitHub** (Files changed → Review changes → Approve); comentário não é aprovação. A `main` é protegida e exige 1 aprovação, inclusive para administradores.
+5. **Nenhum segredo no repositório** (tokens, chaves de API, senhas, `.env`). Credenciais ficam na org (Named Credentials / External Credentials) ou em variáveis de ambiente do CI. O repositório é **público**: nada de nome de empresa empregadora, cliente, pessoa, texto de chamado, dado real ou código/telas de empregador — discovery só com números agregados e respostas anonimizadas.
 6. **Decisão técnica não óbvia vira ADR** em `docs/adr/`.
 7. **Código e nomes técnicos em inglês** (classes, campos, objetos, componentes); documentação de produto em português.
 8. **Configuração feita no Setup volta para o repositório.** Toda mudança feita em tela na org (site, permissões, agente, objetos) é recuperada com `sf project retrieve start` e commitada no mesmo PR. O que não tem metadado vai como passo a passo em `docs/`. Sem isso, o repositório não regenera o produto.
