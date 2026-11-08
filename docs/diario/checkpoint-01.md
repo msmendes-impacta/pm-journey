@@ -22,3 +22,18 @@
 - Pediu que nada fosse commitado antes de ver o resultado. Os commits só foram feitos depois, numa branch, agrupados por assunto.
 - Pediu que o agente fosse além da resposta "a Developer Edition atende" e explorasse as limitações. Disso saíram a consulta à org e a lista de riscos do ADR-0002.
 - Confirmou que um dos usuários administradores da org (Nicoli Ferreira) é a segunda integrante do POD. Com isso, a única licença Salesforce livre fica reservada ao terceiro membro.
+
+## 2026-11-08 — Spec Kit no repositório
+
+**O que o agente fez**
+- Comparou o que tinha testado com o README e a documentação oficial do Spec Kit, a pedido do POD, e encontrou a CLI desatualizada (1.0.5 instalada, 1.3.2 publicada).
+- Antes de instalar no repositório, testou a instalação numa pasta descartável, nas duas versões, e listou cada arquivo criado. Confirmou que nada existente seria sobrescrito e que o caminho das specs (`specs/`) é fixo.
+- Instalou o Spec Kit v1.3.2 e a extensão `assess` numa branch, trocou a constituição genérica por um resumo que aponta para o `AGENTS.md`, adicionou o fluxo ao `AGENTS.md` e registrou a decisão no ADR-0003.
+
+**Onde o agente errou**
+- Recomendou instalar sem antes conferir a versão publicada. Foi o POD que pediu para comparar com a página do projeto, e a diferença de versão mudou o plano.
+- A atualização da CLI (`specify self upgrade`) quebrou a instalação no Windows, porque o executável tentou se substituir enquanto rodava. O agente diagnosticou pelo estado da pasta e passou o comando de reinstalação, que resolveu.
+
+**Onde o POD interveio**
+- Pediu para instalar o Spec Kit agora, e não só no checkpoint 02 como o agente tinha sugerido, para conhecer as skills disponíveis.
+- Pediu a conferência com a documentação oficial antes de seguir.
