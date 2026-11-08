@@ -21,7 +21,7 @@
 | `README.md` | Startup, POD, papéis e URL do MVP |
 | `AGENTS.md` | Este arquivo |
 | `docs/produto/` | Lean Canvas, AI Canvas, PRD, evidências de discovery |
-| `docs/specs/` · `docs/adr/` | Histórias com critérios de aceite · decisões de arquitetura |
+| `docs/specs/` · `docs/adr/` | Histórias com critérios de aceite (uma pasta `NNN-nome/` por feature, criada pelo Spec Kit) · decisões de arquitetura |
 | `docs/diario/` | Diário agêntico, um arquivo por checkpoint |
 | `docs/pitch/` | `pitch.md`, `pitch.pdf`, roteiro da demo |
 | `architecture/` | Modelo LikeC4 (C1 e C2) |
@@ -30,6 +30,7 @@
 | `src/` | Código do MVP (`src/force-app/` = metadados Salesforce) |
 | `.github/` | CI com testes e eval |
 | `manifest/` · `config/` · `scripts/` | Suporte do Salesforce DX: `package.xml`, definição de scratch org, Apex anônimo e SOQL de exemplo |
+| `.specify/` · `.claude/skills/speckit-*` | Spec Kit (ADR-0003): templates, scripts, constituição, extensão `assess` e as skills que o agente usa |
 
 Metadado Salesforce novo **sempre** dentro de `src/force-app/main/default/`. Nada fora de `src/force-app/` é enviado para a org.
 
@@ -52,6 +53,16 @@ npm run test:unit      # LWC (Jest)
 npm run lint           # ESLint em aura/lwc
 npm run prettier:verify
 ```
+
+## Fluxo de especificação (Spec Kit)
+
+Spec-Driven Development com o [Spec Kit](https://github.com/github/spec-kit) v1.3.2 (ADR-0003). As skills rodam no chat do agente, uma por vez, com revisão do POD entre elas.
+
+1. **Discovery** (antes de existir feature): `/speckit-assess-intake` → `research` → `define` → `shape` → `decide`. Saída em `.specify/assessments/<slug>/`. Os entregáveis do bootcamp (Lean Canvas, hipótese, PRD) continuam em `docs/produto/`, que aponta para o assessment como evidência.
+2. **Entrega** (por feature): `/speckit-specify` → `/speckit-clarify` → `/speckit-plan` → `/speckit-tasks` → `/speckit-analyze` → `/speckit-implement` → `/speckit-converge`.
+3. **Onde ficam as specs:** sempre em `docs/specs/NNN-nome/`. O padrão do Spec Kit é `specs/` na raiz e não tem configuração para mudar; ao rodar `/speckit-specify`, o agente define `SPECIFY_FEATURE_DIRECTORY=docs/specs/NNN-nome` (próximo número livre em `docs/specs/`). Spec criada em `specs/` na raiz é erro e deve ser movida.
+4. **Constituição** (`.specify/memory/constitution.md`): só resume este arquivo para as checagens do Spec Kit. A regra vale aqui; se divergirem, corrige-se a constituição.
+5. Branch e PR seguem as regras abaixo; o Spec Kit não cria branch (a extensão `git` não está instalada).
 
 ## Regras do agente
 
