@@ -8,6 +8,8 @@
 >
 > Convenção de fonte: **[E-n]** = entrevista com o autor, rodada n, 2026-11-08 (registrada no histórico desta sessão; o autor é engenheiro de software numa empresa de grande porte que usa o Certinia PSA, e o repositório é público, então nenhum nome de empresa, cliente ou pessoa é registrado).
 
+> **Atualização 2026-11-13:** uma conversa de discovery com um stakeholder interno da área de gestão ([C-1], 2026-11-11) mudou o recorte. A persona passou a ser o **PM**, o RM é só escalonamento reativo, e **overbooking e incidentes saíram do escopo**. O problema agora é a falta de uma visão única do status dos projetos do PM. Os achados abaixo ficam como histórico; o recorte vigente está em `problem.md`.
+
 ## Users & Demand
 
 - O autor constrói ferramentas para PMs; **não é usuário** da rotina descrita. — [E-1] (confidence: high)
