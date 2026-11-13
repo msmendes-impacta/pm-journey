@@ -54,3 +54,20 @@
 - Lembrou que ainda não era hora de desenhar funcionalidades: só problema, formalização e escopo.
 - Pediu o roteiro em inglês, porque os PMs são americanos.
 - Revisou e mesclou o PR #3 deixando só um comentário ("Revisado."), sem a aprovação formal do GitHub. O agente apontou que o repositório não registra revisão por comentário; o POD decidiu proteger a `main`, e a partir daqui o merge só libera com "Approve".
+
+## 2026-11-13 — o problema muda de rumo com a conversa de discovery
+
+**O que o agente fez**
+- Recebeu a síntese de uma conversa de discovery do POD com um stakeholder interno da área de gestão e apontou os conflitos antes de formalizar: o enquadramento "dor interna, sem play de mercado" e a ausência de IA batiam com a regra nº 1 do bootcamp; a regra de horas que entraria no escopo era, ao mesmo tempo, regra interna da empresa (fora do escopo); "se estourar, dispara uma ação" lembrava o overbooking que acabara de sair; e a evidência vinha da patrocinadora, não de um PM.
+- Com as respostas do POD, rodou o `/speckit-assess-define` e escreveu o `problem.md`: persona PM, baseline de pelo menos 10 cliques por resposta no pior caso, fora de escopo explícito e 8 perguntas em aberto. Marcou no `research.md` que o recorte anterior (capacidade e overbooking, visto pelo Resource Manager) virou histórico.
+- Anonimizou tudo: sem nomes de pessoa ou empresa, e sem o termo interno da regra de horas.
+- Abriu o PR #5 e começou a entrevista para achar o papel da IA.
+
+**Onde o agente errou**
+- Começou o `define` assim que o POD respondeu às perguntas, sem um "pode seguir" explícito para o plano que tinha proposto.
+- Na primeira pergunta sobre a IA, falou em "tela-resumo" sem dizer que era a versão sem IA do próprio produto; o POD precisou perguntar.
+
+**Onde o POD interveio**
+- Trouxe a conversa com a gestão, que corrigiu o rumo: a discovery anterior, feita só com o autor, apontava para o Resource Manager e o overbooking.
+- Decidiu: tratar o projeto como produto interno (intraempreendedorismo) até o próximo encontro; regra de negócio e modelo de dados genéricos, criados pelo POD; nada interno entra no repositório, nem anonimizado.
+- Manteve os dois membros do POD como únicos testadores por enquanto. O agente registrou que isso não cumpre o "≥ 2 usuários reais" do checkpoint 03 e que vale levar a dúvida ao professor.
