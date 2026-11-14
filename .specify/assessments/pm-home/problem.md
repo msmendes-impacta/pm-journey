@@ -17,7 +17,7 @@ O Project Manager de uma empresa de serviços que usa uma plataforma PSA não te
 ## Affected Users & Stakeholders
 
 - **Users**:
-  - **Project Manager (PM)** — dono do ciclo do projeto depois do fechamento do contrato (recursos, entregas, planejamento, milestones); quem decide a alocação e quem consultaria a informação todo dia [C-1]. *Fonte indireta:* a afirmação vem do stakeholder de gestão, não de um PM ouvido diretamente.
+  - **Project Manager (PM)** — dono do ciclo do projeto depois do fechamento do contrato (recursos, entregas, planejamento, milestones); quem decide a alocação e quem consultaria a informação todo dia [C-1]. _Fonte indireta:_ a afirmação vem do stakeholder de gestão, não de um PM ouvido diretamente.
   - **Resource Manager (RM)** — entra de forma reativa, quando o PM não acha um recurso; **não é o usuário-alvo** [C-1].
 - **Stakeholders**:
   - **Gestão da área (patrocinadora)** — decide se a ideia avança como próximo passo depois da plataforma de planejamento que está sendo adotada; o MVP serve para demonstrar valor a ela [C-1].
@@ -45,7 +45,7 @@ O Project Manager de uma empresa de serviços que usa uma plataforma PSA não te
 - **Cliques até a resposta** "status de recursos/horas de um projeto" (baseline: **≥ 10 cliques no pior caso**, informado pelo POD [D-1]; caminho medido e número médio: desconhecidos).
 - **Tempo até a resposta** para a mesma pergunta (baseline: desconhecido).
 - **Projetos verificados por sessão sem trocar de tela** (baseline: 1 — o caminho atual é por projeto [C-1]).
-- *Qualitativa:* a gestão aprova levar a ideia adiante como próximo passo (baseline: ideia ainda não apresentada) [C-1].
+- _Qualitativa:_ a gestão aprova levar a ideia adiante como próximo passo (baseline: ideia ainda não apresentada) [C-1].
 
 ## Cost of Inaction
 
@@ -53,11 +53,11 @@ O PM continua montando a visão dos projetos à mão, tela a tela; o custo cresc
 
 ## Open Questions
 
-- [NEEDS CLARIFICATION: onde entra a IA, em uma frase — o que ela faz pelo PM que um dashboard sozinho não faz? Requisito nº 1 do bootcamp ("tirando a IA, o produto ainda resolve a dor? Se sim, é decoração").]
+- ~~Onde entra a IA, em uma frase?~~ **Proposta em `concept.md` (2026-11-14):** a IA faz a triagem — decide quais projetos precisam de atenção, em que ordem e por quê. Também lá: pedidos de recurso, a regra genérica de saldo de horas e as horas do próprio PM entram no primeiro recorte.
 - [NEEDS CLARIFICATION: o professor aceita o enquadramento como produto interno (intraempreendedorismo) em vez de startup de mercado? Quem do POD pergunta no próximo encontro?]
 - [NEEDS CLARIFICATION: validação de usuário — os únicos testadores disponíveis são dois membros do POD, que não são PMs. O checkpoint 03 pede teste com ≥ 2 usuários reais; como cumprir sem acesso a PMs?]
 - [NEEDS CLARIFICATION: como os "≥ 10 cliques" foram contados — qual pergunta, quantos projetos, qual caminho — e qual o número no caso típico?]
 - [NEEDS CLARIFICATION: quantos projetos e recursos um PM acompanha, e com que frequência faz essa verificação? (perguntas 1 e 5 do roteiro, ainda sem resposta)]
 - [NEEDS CLARIFICATION: regra genérica de horas — quando as horas restantes não cabem nos dias úteis que sobram ("estoura"), o que o PM precisa ver ou fazer? Isso não pode virar overbooking pela porta dos fundos.]
-- [NEEDS CLARIFICATION: "entregas" (milestones) entram no primeiro recorte junto com recursos e horas, ou ficam para depois?]
+- ~~"Entregas" (milestones) entram no primeiro recorte?~~ **Sim, como "próximo marco" do projeto** — ver `concept.md`.
 - [NEEDS CLARIFICATION: o termo interno usado para a regra de redistribuição não deve aparecer no produto; qual nome genérico o POD adota?]

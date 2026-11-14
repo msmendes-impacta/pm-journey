@@ -8,38 +8,38 @@
 
 ## 1. Só o autor responde — bloqueia o `define`
 
-| # | Pergunta | Fecha no `problem.md` | Status |
-|---|---|---|---|
-| 1 | **PM ou Resource Manager: de quem é a dor principal?** O autor disse "principalmente PM", mas a rotina relatada (achar quem atende um Resource Request, ver disponibilidade) é do Resource Manager. Qual o palpite, e por quê? | Usuários, enunciado | Aberta |
-| 2 | **O que falta no Work Planner**, em termos de problema (não de tela)? Que pergunta o usuário ainda não consegue responder com ele? | Enunciado, evidência contra | Aberta |
-| 3 | **Um caso real e concreto** de overbooking: o que aconteceu, quando foi percebido, o que foi refeito (pode ser um incidente investigado pelo time, sem dados identificáveis). | Enunciado, custo de não fazer | Aberta |
-| 4 | **Ferramenta interna ou startup?** Se startup, quem é o cliente (ex.: empresas que usam o Certinia PSA)? | Usuários, stakeholders, metas | Aberta |
+| #   | Pergunta                                                                                                                                                                                                                       | Fecha no `problem.md`         | Status |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- | ------ |
+| 1   | **PM ou Resource Manager: de quem é a dor principal?** O autor disse "principalmente PM", mas a rotina relatada (achar quem atende um Resource Request, ver disponibilidade) é do Resource Manager. Qual o palpite, e por quê? | Usuários, enunciado           | Aberta |
+| 2   | **O que falta na ferramenta de planejamento que está sendo adotada**, em termos de problema (não de tela)? Que pergunta o usuário ainda não consegue responder com ele?                                                        | Enunciado, evidência contra   | Aberta |
+| 3   | **Um caso real e concreto** de overbooking: o que aconteceu, quando foi percebido, o que foi refeito (pode ser um incidente investigado pelo time, sem dados identificáveis).                                                  | Enunciado, custo de não fazer | Aberta |
+| 4   | **Ferramenta interna ou startup?** Se startup, quem é o cliente (ex.: empresas de serviços que usam uma plataforma PSA)?                                                                                                       | Usuários, stakeholders, metas | Aberta |
 
 ## 2. Números — o autor levanta depois
 
-| # | Dado | Fecha | Status |
-|---|---|---|---|
-| 5 | **Volume absoluto** de incidentes da categoria por mês e o período considerado (hoje: ~5% da fila; ~60% mau uso, ~40% bug) | Linha de base | Aberta |
-| 6 | **Tempo atual para atender um Resource Request**, se o sistema registra | Linha de base | Aberta |
-| 7 | **Dá para contar** appointments cancelados ou reatribuídos por overbooking a partir dos dados? | Métrica mensurável? | Aberta |
+| #   | Dado                                                                                           | Fecha               | Status |
+| --- | ---------------------------------------------------------------------------------------------- | ------------------- | ------ |
+| 5   | **Volume** de incidentes da categoria (dado interno: só agregado e só se a empresa permitir)   | Linha de base       | Aberta |
+| 6   | **Tempo atual para atender um Resource Request**, se o sistema registra                        | Linha de base       | Aberta |
+| 7   | **Dá para contar** appointments cancelados ou reatribuídos por overbooking a partir dos dados? | Métrica mensurável? | Aberta |
 
 ## 3. Conversas com usuários — roteiro na seção 5
 
-| # | O que esperamos descobrir | Fecha | Status |
-|---|---|---|---|
-| 8 | Com **pelo menos 1 PM e 1 Resource Manager**: quem sente mais a dor | Confirma ou derruba o item 1 | Aberta |
-| 9 | **O que acontece depois** de um overbooking (realocação, cliente, faturamento) | Custo de não fazer | Aberta |
-| 10 | **Frequência** e **tempo gasto** nas verificações | Peso da dor | Aberta |
-| 11 | A palavra deles para a dor, **literalmente** | Evidência de discovery (checkpoint 02) | Aberta |
+| #   | O que esperamos descobrir                                                      | Fecha                                  | Status |
+| --- | ------------------------------------------------------------------------------ | -------------------------------------- | ------ |
+| 8   | Com **pelo menos 1 PM e 1 Resource Manager**: quem sente mais a dor            | Confirma ou derruba o item 1           | Aberta |
+| 9   | **O que acontece depois** de um overbooking (realocação, cliente, faturamento) | Custo de não fazer                     | Aberta |
+| 10  | **Frequência** e **tempo gasto** nas verificações                              | Peso da dor                            | Aberta |
+| 11  | A palavra deles para a dor, **literalmente**                                   | Evidência de discovery (checkpoint 02) | Aberta |
 
 ## 4. Já fechado — não perguntar de novo
 
 - **Personas**: Project Manager, Resource Manager, Technical Resource, Business Lead (provavelmente quem cobra o PM), recursos (Contacts no PSA).
 - **Perguntas-chave do usuário**: "qual recurso tem quantas horas disponíveis?" e "qual recurso corre risco de overbooking?".
-- **Alternativa atual**: várias telas (Resource Planner, experiências customizadas) e outras pessoas; quando dá errado, incidente para a TI (~5% da fila; ~60% mau uso, ~40% bug).
+- **Alternativa atual**: várias telas (o planejador nativo e experiências customizadas) e outras pessoas; quando dá errado, incidente para a TI (maioria mau uso).
 - **Candidatas a métrica**: redução do retrabalho com appointments em overbooking; tempo para atender um Resource Request.
-- **Fora de escopo**: IGC; aprovações de timecard (anotados para o futuro).
-- **Contexto**: Resource Planner descontinuado pela Certinia (Spring 2025); Work Planner em teste na org e não atende por completo.
+- **Fora de escopo** (em 2026-11-08): regra interna de governança de horas; aprovações de timecard. _Revisto em 2026-11-14:_ regra genérica de saldo de horas entrou (ver `concept.md`).
+- **Contexto**: no mercado, fornecedores de PSA estão trocando seus planejadores de recurso; no ambiente do autor, a ferramenta de planejamento em adoção não atende por completo.
 
 Detalhes e fontes em [`research.md`](research.md).
 
@@ -49,7 +49,7 @@ Detalhes e fontes em [`research.md`](research.md).
 
 - **Do not pitch the idea.** Never ask "would a dashboard that does X be useful?" — it only gets a polite "yes".
 - **One question per message**, and wait for the answer.
-- **When an answer is generic** ("it's hard", "too many screens"), follow up with: *"Could you give me an example from the last time that happened?"*
+- **When an answer is generic** ("it's hard", "too many screens"), follow up with: _"Could you give me an example from the last time that happened?"_
 - **Copy answers verbatim** into section 6, without names, customers, or ticket text.
 - Talk to **at least one PM and one Resource Manager**.
 
@@ -81,11 +81,5 @@ Uma seção por conversa. Respostas literais, anonimizadas.
 - **Data**:
 - **Papel**: PM | Resource Manager | outro
 - **Canal**: chat
-- **Respostas**:
-  1.
-  2.
-  3.
-  4.
-  5.
-  6.
+- **Respostas**: 1. 2. 3. 4. 5. 6.
 - **Observações do entrevistador**:
