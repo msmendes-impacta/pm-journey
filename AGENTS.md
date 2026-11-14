@@ -5,7 +5,7 @@
 
 ## Produto
 
-**[a decidir pelo POD]** — nome da startup, problema, persona e o papel da IA (ver `docs/produto/`).
+Iniciativa interna (intraempreendedorismo, a confirmar com o professor), sem nome de startup. **Persona:** Project Manager, que vê só os próprios projetos. **Problema:** não há um lugar único para ver horas, pedidos de recurso e marcos dos projetos do PM. **Papel da IA:** triagem: decide quais projetos precisam de atenção, em que ordem e por quê; sugere a próxima ação, nunca age sozinha. Modelo, regras e dados **genéricos e fictícios**. Detalhes em `README.md`, `docs/produto/` e `.specify/assessments/pm-home/concept.md`.
 
 ## Stack
 
@@ -16,21 +16,21 @@
 
 ## Estrutura do repositório
 
-| Caminho | O que vai lá |
-|---|---|
-| `README.md` | Startup, POD, papéis e URL do MVP |
-| `AGENTS.md` | Este arquivo |
-| `docs/produto/` | Lean Canvas, AI Canvas, PRD, evidências de discovery |
-| `docs/specs/` · `docs/adr/` | Histórias com critérios de aceite (uma pasta `NNN-nome/` por feature, criada pelo Spec Kit) · decisões de arquitetura |
-| `docs/diario/` | Diário agêntico, um arquivo por checkpoint |
-| `docs/pitch/` | `pitch.md`, `pitch.pdf`, roteiro da demo |
-| `architecture/` | Modelo LikeC4 (C1 e C2) |
-| `prototype/` | Telas HTML do protótipo |
-| `evals/` | Casos de avaliação da IA + script com a taxa de acerto |
-| `src/` | Código do MVP (`src/force-app/` = metadados Salesforce) |
-| `.github/` | CI com testes e eval |
-| `manifest/` · `config/` · `scripts/` | Suporte do Salesforce DX: `package.xml`, definição de scratch org, Apex anônimo e SOQL de exemplo |
-| `.specify/` · `.claude/skills/speckit-*` | Spec Kit (ADR-0003): templates, scripts, constituição, extensão `assess` e as skills que o agente usa |
+| Caminho                                  | O que vai lá                                                                                                          |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `README.md`                              | Startup, POD, papéis e URL do MVP                                                                                     |
+| `AGENTS.md`                              | Este arquivo                                                                                                          |
+| `docs/produto/`                          | Lean Canvas, AI Canvas, PRD, evidências de discovery                                                                  |
+| `docs/specs/` · `docs/adr/`              | Histórias com critérios de aceite (uma pasta `NNN-nome/` por feature, criada pelo Spec Kit) · decisões de arquitetura |
+| `docs/diario/`                           | Diário agêntico, um arquivo por checkpoint                                                                            |
+| `docs/pitch/`                            | `pitch.md`, `pitch.pdf`, roteiro da demo                                                                              |
+| `architecture/`                          | Modelo LikeC4 (C1 e C2)                                                                                               |
+| `prototype/`                             | Telas HTML do protótipo                                                                                               |
+| `evals/`                                 | Casos de avaliação da IA + script com a taxa de acerto                                                                |
+| `src/`                                   | Código do MVP (`src/force-app/` = metadados Salesforce)                                                               |
+| `.github/`                               | CI com testes e eval                                                                                                  |
+| `manifest/` · `config/` · `scripts/`     | Suporte do Salesforce DX: `package.xml`, definição de scratch org, Apex anônimo e SOQL de exemplo                     |
+| `.specify/` · `.claude/skills/speckit-*` | Spec Kit (ADR-0003): templates, scripts, constituição, extensão `assess` e as skills que o agente usa                 |
 
 Metadado Salesforce novo **sempre** dentro de `src/force-app/main/default/`. Nada fora de `src/force-app/` é enviado para a org.
 
